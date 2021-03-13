@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainbk">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mainToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/purple_200"
+        app:layout_collapseMode="pin"
+        app:popupTheme="@style/Theme.MyApplication.PopupOverlay"
+        app:title="Telebabies" />
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/dl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/main_sw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/main_button1"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="135dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bt"
+                    android:layout_below="@id/progress_bar"
+                    android:text="小波 "
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/main_button2"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/main_button1"
+                    android:layout_marginLeft="135dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bt2"
+                    android:text="拉拉"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/main_button3"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/main_button2"
+                    android:layout_marginLeft="135dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bt3"
+                    android:text="迪西"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/main_button4"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/main_button3"
+                    android:layout_marginLeft="135dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bt4"
+                    android:text="丁丁"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/main_button5"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/main_button4"
+                    android:layout_marginLeft="135dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bt5"
+                    android:text="图鉴 "
+                    android:textSize="24sp" />
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:outlineAmbientShadowColor="@color/white"
+                    android:outlineSpotShadowColor="@color/black"/>
+
+            </RelativeLayout>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+        <RelativeLayout
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:gravity="center_vertical">
+
+            <com.google.android.material.navigation.NavigationView
+                android:id="@+id/nav"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/purple_200"
+                app:menu="@menu/leftdra" />
+        </RelativeLayout>
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</RelativeLayout>
